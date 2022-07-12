@@ -1,9 +1,9 @@
-###Desarrollo ejercicios unidades 1 y 2
+### Desarrollo ejercicios unidades 1 y 2
 Aquí se desarrollan las actividades descritas en las unidades 1 y 2 del curso alojado en [el repositorio del curso de bioinformática](https://github.com/u-genoma/BioinfinvRepro/) en el contexto de la tercera pasantía del curso de "Técnicas y Metodologías en Genética" de la escuela de postgrado de la Facultad de Medicina de la Universidad de Chile.
 
-###Unidad 1
+### Unidad 1
 ___
-####Introducción a la línea de comandos y la terminal
+#### Introducción a la línea de comandos y la terminal
 Los primeros comandos son `date` y `echo`, los cuales tienen los siguientes outputs en la terminal:
 
 ```
