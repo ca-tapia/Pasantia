@@ -40,7 +40,7 @@ Type 'q()' to quit R.
 
 > quit()
 ```
-####Navegación y manejo básico de archivos y datos
+#### Navegación y manejo básico de archivos y datos
 El comando `pwd` entrega la ubicación del directorio actual.
 Con el comando `cd` podemos cambiar de directorio. El comando `cd` más el nombre de un subdirectorio del directorio en que nos encontramos nos permite movernos a ese directorio, mientras ese comando más la ruta de un directorio (aunque no sea un subdirectorio inmediato del directorio en que nos encontramos) nos permite movernos a ese directorio. Ejemplo:
 
@@ -81,7 +81,7 @@ El comando `man` muestra el manual de cualquier comando, para salir de esa venta
 
 `rm` Elimina un archivo o directorios
 
-###Comando `tar`
+### Comando `tar`
 El comando `tar` permite realizar compresión de archivos.
 
 ```
@@ -137,7 +137,7 @@ drwxr-xr-x  0 camilo staff       0 Jan 17  2020 Maiz/
 
 Esto puede ser de utilidad en caso de que se necesite corroborar la existencia de un archivo en particular dentro de un archivo ya comprimido antes de descomprimirlo, por ejemplo.
 
-###Crear archivos desde la terminal
+### Crear archivos desde la terminal
 Los comando `vi`, `nano` y `touch` permiten crear archivos desde la terminal.
 
 El comando`touch` crea un archivo vacío, mientras que `nano` y `vi` abren "ventanas" que permiten ingresar texto, aunque `vi` requiere de aprenderse los atajos del teclado para usarlo.
@@ -172,7 +172,7 @@ ATTTCCCAGATAAATCCCCTAGCTAATTCCTGGCAAAAGATACAGGATCTGAAAATAGAAAACTTATTTG
 ACCAATGAAATGCTCTTTGAGTAATTGCCTCGATTCAGAATCATTTTTATTTTTCTATCCGAGAACTAAA
 ATGATTAGGAAATAGATACATTACATGGGGAAAGCCGTGTGCAATGAGAAT
 ```
-###Uso de `*``?``[]`
+### Uso de `*``?``[]`
 
 **Ejercicio: Necesitamos crear más archivos .bed y .fam para los ejemplos de abajo. Queremos qué se llamen `ejemplo_final.bed` y `ejemplo_final.fam`. ¿Cómo hacerlo?**
 
@@ -206,7 +206,7 @@ $ ls *.b??
 ejemplo_final.bed nuevos_final.bed  nuevos_final.bim
 ```
 
-###Funciones de búsqueda de archivos
+### Funciones de búsqueda de archivos
 
 Los comandos `less` y `more` permiten abrir archivos una línea o página a la vez. Para salir se debe presionar "q". `less` permite abrir más tipos de archivos.
 
@@ -622,7 +622,7 @@ $ cat nuevos_final.fam ejemplo_final.bed ejemplo_final.fam
 164 teos_9107 0 0 0 -9
 ```
 
-###Expresiones regulares y búsqueda de patrones
+### Expresiones regulares y búsqueda de patrones
 
 El comando `grep` permite buscar expresiones regulares en uno o más archivos.
 
@@ -630,7 +630,7 @@ El comando `grep` permite buscar expresiones regulares en uno o más archivos.
 
 Con el comando `man`
 
-####Usos comunes de `grep`
+#### Usos comunes de `grep`
 Leer el archivo tomatesverdes.fasta con el comando `less`
 
 ```
@@ -779,7 +779,7 @@ jitomate.fasta:>gi|385137316|gb|JQ412261.1|
 jitomate.fasta:>gi|315259972|gb|HQ619840.1|
 secsIDs.txt (END)
 ```
-###Redirección con bash
+### Redirección con bash
 **Pregunta ¿Qué son el Standard output y el Standard input?**
 
 El standard output corresponde al output "normal" o "esperado" para un determinado comando, mientras que el standard input corresponde a los comandos ingresados en la terminal.
@@ -849,7 +849,7 @@ concatenados: No such file or directory
 (base) 
 ```
 
-###Loops en bash
+### Loops en bash
 
 **¿Cuándo debo usar comillas en la lista de elementos?**
 
@@ -865,7 +865,7 @@ Separa líneas de comando
 
 **Ejercicio Navega al directorio BioinfInvRepro/Unidad1/Prac_Uni1. Desde ahí (i.e. sin utilizar cd) utiliza un for loop para crear por lo menos cuatro directorios dentro del directorio Tomates/VerdesFritos. Tu for loop debe incluir una variable definida externamente.**
 
-####Arreglos
+#### Arreglos
 
 ```
 $ a=( gato gatito gatnnn )
@@ -1056,9 +1056,9 @@ $ $fecha
 Sun Jul 10 20:37:46 -04 2022
 ```
 
-###Unidad 2
+### Unidad 2
 ---
-####Organización de un proyecto bioinformático
+#### Organización de un proyecto bioinformático
 
 Un proyecto bioinformático puede organizarse utilizando la plataforma "Github" la cual hace uso de la herramienta `git`.
 `git config --global user.mail "email@example.com"`
@@ -1132,7 +1132,7 @@ El argumento `-m` permite agregar un comentario al respecto.
 
 `git log` Permite ver el historial de modificaciones en la rama.
 
-###Creación de pipelines
+### Creación de pipelines
 
 **Ejercicio: Mira el siguiente script (tomado del manual de Stacks) y contesta lo siguiente:**
 
@@ -1218,7 +1218,7 @@ Realiza el alineamiento de las secuencias
 
 Existen cuatro for loops en el código, el primero de ellos toma cada archivo y realiza el alineamiento de cada uno de ellos. El segundo toma los archivos alineados e identifica snps. El tercero generará una lista de archivos para ser procesado por `cstacks` y finalmente el quinto generará el catálogo de snps y tendrá como output un archivo con todos ellos. 
 
-###Correr R en batch mode
+### Correr R en batch mode
 
 Un archivo .R puede ser corrido con el script `Rscript`. Una alternativa a este comando es `R CMD BATCH`, el cual tiene como output un archivo .Rout, idependientemente de que el script tenga un comando como `cat` o `less` que impliquen imprimir el output en la pantalla. 
 
