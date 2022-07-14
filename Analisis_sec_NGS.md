@@ -72,6 +72,27 @@ Analysis complete for S10_R2_filter.fastq.gz
 
 Las secuencias se alinean contra el genoma de referencia, en este caso el hg19, con el software bwa, obteniendo un archivo sam.
 
+Para esto fue necesario descargar un genoma de referencia, en este caso fue el hg19. Para su descarga se utilizaron los siguientes comandos:
+
+```
+wget hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz
+tar -zxvf chromFa.tar.gz
+cat chr*.fa > hg19.fa
+```
+Posteriormente, fue necesario "procesar" este genoma de referencia de modo de que fuera compatible con el software bwa. Para eso se utilizaron los siguientes comandos:
+
+```
+bwa index -a bwtsw hg19_reference.fa
+```
+```
+samtools faidx hg19_reference.fa
+```
+```
+java -jar picard.jar CreateSequenceDictionary REFERENCE=hg19_reference.fa OUTPUT=hg19_reference.dict
+```
+
+
+
 ```
 $ bwa mem hg19_reference.fa S10_R1_filter.fastq.gz S10_R2_filter.fastq.gz > S10.sam
 [M::bwa_idx_load_from_disk] read 0 ALT contigs
