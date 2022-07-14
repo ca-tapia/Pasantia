@@ -90,7 +90,17 @@ samtools faidx hg19_reference.fa
 ```
 java -jar picard.jar CreateSequenceDictionary REFERENCE=hg19_reference.fa OUTPUT=hg19_reference.dict
 ```
+Este procesamiento generó diversos archivos derivados de "hg19_reference.fa".
 
+
+```
+$ ls hg19*
+hg19_reference.dict   hg19_reference.fa.ann hg19_reference.fa.sa
+hg19_reference.fa     hg19_reference.fa.bwt
+hg19_reference.fa.amb hg19_reference.fa.pac
+```
+
+Una vez completados estos pasos se procede al alineamiento mediante el software bwa:
 
 
 ```
