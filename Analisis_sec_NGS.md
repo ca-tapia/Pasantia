@@ -224,7 +224,7 @@ El análisis con Qualimap muestra que la profundidad de cobertura de la corrida 
 
 Por otro lado, la amplitud de la cobertura para las distintas regiones fue como se indica en el gráfico a continuación:
 
- ![](/Users/camilo/Desktop/Github/Images/genome_coverage_quotes.png)
+ ![](Images/genome_coverage_quotes.png)
  
 ### Procesamiento del alineamiento usando GATK
 
