@@ -56,13 +56,13 @@ Analysis complete for S10_R2_filter.fastq.gz
  
  Los resultados de fastqc para la muestra S10_R1 fue:
  
- ![](/Users/camilo/Desktop/Github/Images/S10_R1.png)
+ ![](Images/S10_R1.png)
  
  Mostrando que practicamente todas las posiciones poseen un phred score mayor a 28 (a excepción de la última, pero aún así esta es >24), lo que indica lecturas de buena calidad.
  
  Por otro lado, los resultados para S10_R2 fueron:
  
-  ![](/Users/camilo/Desktop/Images/S10_R2.png)
+  ![](Images/S10_R2.png)
   
   Que si bien podrían considerarse de una calidad ligeramente inferior al read 1, siguen siendo de buena calidad (phred score >30 en practicamente todas las lecturas).
   
