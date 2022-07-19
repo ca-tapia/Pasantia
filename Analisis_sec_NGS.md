@@ -1,9 +1,11 @@
 ### Análisis de lecturas NGS
 ___
 
+El siguiente trabajo corresponde al desarrollo de los [tutoriales de las sesiones 2 y 3 de la unidad 6 del curso de Introducción a la bioinformática e investigación reproducible para análisis genómicos](https://github.com/u-genoma/BioinfinvRepro/blob/master/Unidad6/Unidad6_IntroGenomica_NexGenSeq.md) realizado en colaboración entre la Universidad Nacional Autónoma de México, CONABIO y la Universidad de Chile, en el contexto de la tercera pasantía del curso de "Técnicas y Metodologías en Genética" de la escuela de postgrado de la Facultad de Medicina de la Universidad de Chile, bajo la guía del profesor Ricardo Verdugo.
+
 #### Control de calidad
 
-Si bien las muestras se reciben *post* con el control de  calidad inicial realizado, se realiza una "corroboración" utilizando fastqc con los siguientes comandos: 
+Si bien las muestras se reciben *post* control de  calidad inicial realizado y habiendo realizado la "poda" de los adaptadores y nucleótidos secuenciados con baja calidad, se realiza una "corroboración" utilizando fastqc con los siguientes comandos: 
 
 ```
 $ fastqc ../181004_curso_calidad_datos_NGS/fastq_filter/S10_R1_filter.fastq.gz -o .
