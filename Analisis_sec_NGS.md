@@ -94,7 +94,6 @@ java -jar picard.jar CreateSequenceDictionary REFERENCE=hg19.fasta OUTPUT=hg19.d
 ```
 Este procesamiento generó diversos archivos derivados de "hg19_reference.fa".
 
-
 ```
 $ ls hg19*
 hg19.dict      hg19.fasta.ann hg19.fasta.sa
@@ -227,6 +226,13 @@ El análisis con Qualimap muestra que la profundidad de cobertura de la corrida 
 Por otro lado, la amplitud de la cobertura para las distintas regiones fue como se indica en el gráfico a continuación:
 
  ![](Images/genome_coverage_quotes.png)
+ 
+#### Tarea
+
+**Generar un reporte técnico de calidad del alineamiento con qualimap.**
+
+[Reporte con Qualimap](Images/qualimapReport.html)
+ 
  
 ### Procesamiento del alineamiento usando GATK
 
