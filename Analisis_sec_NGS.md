@@ -231,7 +231,7 @@ Por otro lado, la amplitud de la cobertura para las distintas regiones fue como 
 
 **Generar un reporte técnico de calidad del alineamiento con qualimap.**
 
-[Reporte Qualimap](/Images/qualimapReport.html)
+[Reporte Qualimap](/Images/"Qualimap report_ BAMQC.pdf")
  
  
 ### Procesamiento del alineamiento usando GATK
