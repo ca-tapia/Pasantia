@@ -590,7 +590,7 @@ Done. There were no warn messages.
 
 La anotación de vatiantes permite vincular cambios de nucleotídicos con cambios en el fenotipo.
 
-(Usar software snpEff v4.3p
+(Usar software snpEff v4.3p)
 
 ```
 $ java -jar analisis_secuencias/snpEff2/snpEff/snpEff.jar -csvStats S10.csv GRCh37.75 S10_FILTER_VARIANTS.vcf > S10.vcf
