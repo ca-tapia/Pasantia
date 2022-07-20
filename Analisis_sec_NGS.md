@@ -255,14 +255,14 @@ En este caso la mayoría de los fragmentos tienen un phred score de 60, lo que s
 ![](Images/genome_gc_content_per_window.png)
 
 **Conclusiones**
- De acuerdo con el reporte de Qualimap, 
+ De acuerdo con el reporte de Qualimap, considerando que la cantidad de lecturas mapeadas corresponde al 97,08% de las lecturas (pudiendo el 2,92% no mapeado corresponder a lecturas que no encontraron una región con la cual alinear en el genoma de referencia utilizado), a que la calidad del mapeo (qmap) fue en la gran mayoría  ~60 en la escala de phred y que la covertura promedio fue 97,7166x, podemos decir que el ensamblaje fue satisfactorio. 
  
 ### Procesamiento del alineamiento usando GATK
 
 Lo primero es calibrar la puntuación de calidad de las bases utilizando la herramienta "BaseRecalibrator" del software gatk. Para eso utilizamos el siguiente comando:
 
 ```
-$ ava -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T BaseRecalibrator -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -I S10_sorted_RG.bam -knownSites /home-old/data/references/genomes/hg19_reference/dbSNP_hg19.vcf -o S10_recall_data.table
+$ java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T BaseRecalibrator -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -I S10_sorted_RG.bam -knownSites /home-old/data/references/genomes/hg19_reference/dbSNP_hg19.vcf -o S10_recall_data.table
 INFO  21:35:59,004 HelpFormatter - --------------------------------------------------------------------------------- 
 INFO  21:35:59,008 HelpFormatter - The Genome Analysis Toolkit (GATK) v3.7-0-gcfedb67, Compiled 2016/12/12 11:21:18 
 INFO  21:35:59,009 HelpFormatter - Copyright (c) 2010-2016 The Broad Institute 
@@ -608,4 +608,40 @@ La anotación de vatiantes permite vincular cambios de nucleotídicos con cambio
 ```
 $ java -jar analisis_secuencias/snpEff2/snpEff/snpEff.jar -csvStats S10.csv GRCh37.75 S10_FILTER_VARIANTS.vcf > S10.vcf
 ```
+
+### **Tarea**
+
+**Indique el número de genes incluidos en el panel e incluya una tabla con la lista de genes (consejo: revise el archivo regiones_blanco.bed). Indique también la región genómica total (en pares de bases) cubierta por el panel, o sea, el tamaño de las regiones blanco (consejo: revise su reporte qualimapReport.html).**
+
+La región cubierta por el panel es de 91120 pb, mientras que el número de genes incluidos en el panel es de 26, corresponden a: 
+
+* ABL1
+* BRAF
+* BRCA1
+* BRCA2
+* CALR
+* CBL
+* CRLF2
+* EZH2
+* FLT3
+* IKZF1
+* IL7
+* JAK2
+* JAK3
+* KIT
+* KRAS
+* MLL
+* MPL
+* P2RY8
+* PAX5
+* PDGFRA
+* PDGFRB
+* PTEN
+* RB1
+* SF3B1
+* TP53
+* WT1
+
+
+
 
