@@ -207,7 +207,9 @@ Writing HTML report...
 HTML report created successfully
 
 Finished
+```
 
+```
 $ ls
 S10.bam                   S10_R2_filter_fastqc.html hg19_reference.fa.ann
 S10.sam                   S10_R2_filter_fastqc.zip  hg19_reference.fa.bwt
@@ -221,18 +223,26 @@ S10_R2_filter.fastq.gz    hg19_reference.fa.amb     regiones_blanco.bed
 
 El archivo "regiones_blanco.bed" corresponde a un archivo que indica cuales fueron las regiones blanco de secuenciación (panel dirigido).
 
-El análisis con Qualimap muestra que la profundidad de cobertura de la corrida fue de 97,7169 (alineamientos "uno sobre otro"). 
-
-Por otro lado, la amplitud de la cobertura para las distintas regiones fue como se indica en el gráfico a continuación:
-
- ![](Images/genome_coverage_quotes.png)
- 
 #### Tarea
 
 **Generar un reporte técnico de calidad del alineamiento con qualimap.**
 
 [Reporte Qualimap](Images/Qualimap_report_BAMQC.pdf)
+
+**Seleccionar 4 figuras que a su juicio sean las más informativas sobre la calidad de los datos y del ensamble**
+
+
+1) En primer lugar, la amplitud de la cobertura para las distintas regiones, que fue como indica el gráfico a continuación:
+
+ ![](Images/genome_coverage_quotes.png)
  
+Este gráfico muestra la fracción de la región de interés que fue cubierta desde 1x hasta 51x. 
+
+2) El segundo gráfico que puede ser de importante para evaluar la calidad de los datos y el ensamble podría ser el que sigue:
+
+ ![](Images/genome_coverage_histogram.png)
+ 
+ Que muestra la covertura que tuvieron las distintas regiones de interés (notar que 7250 regiones de interés tuvieron covertura 0x).
  
 ### Procesamiento del alineamiento usando GATK
 
