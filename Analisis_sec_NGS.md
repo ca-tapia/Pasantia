@@ -244,6 +244,19 @@ Este gráfico muestra la fracción de la región de interés que fue cubierta de
  
  Que muestra la covertura que tuvieron las distintas regiones de interés (notar que 7250 regiones de interés tuvieron covertura 0x).
  
+3) Un tercer gráfico importante para evaluar la calidad del ensamble es el "qmap", que muestra en escala de phred la probabilidad de cometer un error al asignar determinada secuencia a una región particular durante el alineamiento.
+
+![](Images/genome_mapping_quality_histogram.png)
+
+En este caso la mayoría de los fragmentos tienen un phred score de 60, lo que significa una posibilidad de error en un millón.
+
+4) Finalmente, el contenido de GC puede ser de utilidad dependiendo de qué es lo que se está secuenciando. Si se tratara de una secuenciación de genoma humano completo se esperaría una curva similar a la normal, sin embargo, en este caso se observan múltiples peaks debido a que se trata de un panel de secuenciación dirigido.
+
+![](Images/genome_gc_content_per_window.png)
+
+**Conclusiones**
+ De acuerdo con el reporte de Qualimap, 
+ 
 ### Procesamiento del alineamiento usando GATK
 
 Lo primero es calibrar la puntuación de calidad de las bases utilizando la herramienta "BaseRecalibrator" del software gatk. Para eso utilizamos el siguiente comando:
