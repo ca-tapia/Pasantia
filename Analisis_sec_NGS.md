@@ -642,6 +642,29 @@ La región cubierta por el panel es de 91120 pb, mientras que el número de gene
 * TP53
 * WT1
 
+La región genómica total cubierta por el panel es de 91129 pb.
+
+**Realice el filtrado de variantes con dos filtros, DP<10 y uno adicional que usted proponga**
+
+Se realizan los filtrados con DP<10 y como segundo filtro AF<0.5, por lo que adicionalmente a aquellas variantes con al menos una profundidad de covertura de 10x, se filtrarán aquellas con una frecuencia alélica inferior a 0.5.
+
+**Estime cuántas variantes son eliminadas por el filtro DP<10 solamente, y cuántas por ambos filtros.**
+
+```
+grep -c 'FILTER' S10_FILTER_VARIANTS.vcf
+9
+```
+
+```
+grep -c 'FILTER' S10_2FILTER_VARIANTS.vcf
+16
+```
+
+Nueve variantes serían filtradas sólo con el filtro DP<10, mientras que 16 serían filtradas utilizando ambos filtros.
+
+**Visualizar 100 pb de una región del alineamiento mediante IGV**
+
+![](Images/Captura_IGV.png)
 
 
 
