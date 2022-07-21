@@ -648,12 +648,30 @@ La región genómica total cubierta por el panel es de 91129 pb.
 
 Se realizan los filtrados con DP<10 y como segundo filtro AF<0.5, por lo que adicionalmente a aquellas variantes con al menos una profundidad de covertura de 10x, se filtrarán aquellas con una frecuencia alélica inferior a 0.5.
 
+Se utilizaron estos comandos para el filtrado de SNPs: 
+
+```
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_RAW_SNP.vcf --filterExpression "DP <10" --filterName "FILTER" --filterExpression "AF <0.5" --filterName "TAREA" -o S10_FILTERAF_SNP.vcf
+
+```
+Y estos comandos para el filtrado de indels:
+
+```
+java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_RAW_INDEL.vcf --filterExpression "DP <10" --filterName "FILTER" --filterExpression "AF <0.5" --filterName "TAREA" -o S10_FILTERED_INDELAF.vcf
+``
+
+
 **Estime cuántas variantes son eliminadas por el filtro DP<10 solamente, y cuántas por ambos filtros.**
+
+Solamente con el filtro DP<10:
 
 ```
 grep -c 'FILTER' S10_FILTER_VARIANTS.vcf
 9
 ```
+
+Con los filtros DP<10 y AF<0.5
+
 
 ```
 grep -c 'FILTER' S10_2FILTER_VARIANTS.vcf
@@ -666,5 +684,10 @@ Nueve variantes serían filtradas sólo con el filtro DP<10, mientras que 16 ser
 
 ![](Images/Captura_IGV.png)
 
+**Incluya el reporte completo generado por snpEff (html) como anexo.**
+
+Se adjunta el reporte completo de snpEff generado para el cromosoma 19.
+
+![Reporte snpEff](Images/snpEff_summary.html)
 
 
