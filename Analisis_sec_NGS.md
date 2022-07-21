@@ -688,6 +688,6 @@ Nueve variantes serían filtradas sólo con el filtro DP<10, mientras que 16 ser
 
 Se adjunta el reporte completo de snpEff generado para el cromosoma 19.
 
-![Reporte snpEff](Images/snpEff_summary.html)
+[Reporte snpEff](Images/snpEff_summary.html)
 
 
