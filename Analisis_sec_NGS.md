@@ -691,3 +691,5 @@ Se adjunta el reporte completo de snpEff generado para el cromosoma 19.
 [Reporte snpEff](Images/snpEff.pdf)
 
 
+
+
