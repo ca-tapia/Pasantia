@@ -658,7 +658,7 @@ Y estos comandos para el filtrado de indels:
 
 ```
 java -jar /opt/GenomeAnalysisTK-3.7-0/GenomeAnalysisTK.jar -T VariantFiltration -R /home-old/data/references/genomes/hg19_reference/hg19.fasta -V S10_RAW_INDEL.vcf --filterExpression "DP <10" --filterName "FILTER" --filterExpression "AF <0.5" --filterName "TAREA" -o S10_FILTERED_INDELAF.vcf
-``
+```
 
 
 **Estime cuántas variantes son eliminadas por el filtro DP<10 solamente, y cuántas por ambos filtros.**
